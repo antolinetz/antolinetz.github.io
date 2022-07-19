@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;700&display=swap');
+
+body {
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+  margin: 0 !important
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background: #485563;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #29323c, #485563);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #29323c, #485563); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.atm  {
+  padding: 20px;
+  display: flex;
+  width: 720px;
+  margin: 0 auto;
+  border: 1px solid rgba(255,255,255,0.7);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.screen-panel {
+  width: 480px;
+  color: #fff;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 20PX;
+  text-align: center;
+}
+
+#resultado {
+  transition: 2s;
+  text-align: left;
+  display: inline;
+}
+
+input[type="number"]#cantidad {
+  width: 360px;
+  display: block;
+  padding: 12px;
+  font-size: 2em;
+  color: inherit;
+  align-self: center;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255,255,255,0.7);
+}
+
+::-webkit-input-placeholder { /* Edge */
+  font-size: .7em;
+  text-align: center;
+  top: -5px;
+  position: relative;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-size: .7em;
+  text-align: center;
+  top: -5px;
+  position: relative;
+}
+
+::placeholder {
+  font-size: .7em;
+  text-align: center;
+  top: -5px;
+  position: relative;
+}
+
+.control-panel{
+  display: flex;
+  justify-content: space-between;
+  width: 240px;
+  margin-top: 3%;
+}
+
+.numpad {
+  width: 160px;
+  text-align: center;
+}
+
+.btns {
+
+}
+
+input[type="button"], input[type="number"] {
+  all: initial;
+  margin: 4px auto;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+input[type="button"].numbtn {
+  width: 50px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+.btns input[type="button"] {
+  padding: 12px 5px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.btns input[type="button"]:disabled {
+  opacity: 0.3;
+}
+
+#retirar {
+  background-color: #0b6;
+}
+
+#btnDel {
+  background-color: #fc4;
+}
+
+#btnReset {
+  background: #f03;
+}
+
+div.resultado-billete {
+  width: 25%;
+  display: inline-block;
+  font-weight: lighter;
+}
+
+img.billete {
+  position: relative;
+  width: 95px;
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+}
+
+p.destacado {
+  font-weight: bolder;
+  text-align: center;
+  color: #ffca28;
+  font-size: 2em;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cajero automático</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="atm">
+        <div class="screen-panel">
+          <h1>Tu ATM a la mano</h1>
+          <input type="number" name="cantidad" id="cantidad" value="" onkeyup="ingresarCantidad()" placeholder="Ingresa la cantidad a retirar" />
+          <div id="mensaje"></div>
+          <div id="resultado"></div>
+        </div>
+
+        <div class="control-panel">
+          <div class="numpad">
+            <input type="button" class="numbtn" value="1" id="1" onClick=addNumber(this); />
+            <input type="button" class="numbtn" value="2" id="2" onClick=addNumber(this); />
+            <input type="button" class="numbtn" value="3" id="3" onClick=addNumber(this); />
+            <br>
+            <input type="button" class="numbtn" value="4" id="4" onClick=addNumber(this); />
+            <input type="button" class="numbtn" value="5" id="5" onClick=addNumber(this); />
+            <input type="button" class="numbtn" value="6" id="6" onClick=addNumber(this); />
+            <br>
+            <input type="button" class="numbtn" value="7" id="7" onClick=addNumber(this); />
+            <input type="button" class="numbtn" value="8" id="8" onClick=addNumber(this); />
+            <input type="button" class="numbtn" value="9" id="9" onClick=addNumber(this); />
+            <br>
+            <input type="button" class="numbtn" value="0" id="0" onClick=addNumber(this); />
+          </div>
+          <div class="btns">
+            <input id="btnDel" type="button" value="Corregir" onclick="deleteNumber();" />
+            <br>
+            <input id="btnReset" type="button" value="Borrar" onclick="clearCantidad();" />
+            <br>
+            <input type="button" value="Retirar" id="retirar" disabled  />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/atm.js">
+    </script>
+  </body>
+</html>

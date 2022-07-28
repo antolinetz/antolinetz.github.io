@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Juguemos a Papel 📃, Tijera ✂, Piedra 🥌</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="bg-image"></div>
+    <h1>Juguemos a Papel, Tijera, Piedra</h1>
+    <section class="botones">
+        <button name="ptp" id="papel" onclick="aJugar()"><img src="assets/icon-papel.png" alt="Papel"></button>       
+        <button name="ptp" id="tijera" onclick="aJugar()"><img src="assets/icon-tijera.png" alt="Tijera"></button>
+        <button name="ptp" id="piedra" onclick="aJugar()"><img src="assets/icon-piedra.png" alt="Piedra"></button>
+    </section>
+
+    <p id="marcador">Victorias: 0 <br/>Derrotas: 0 <br/>Empates: 0</p>
+
+    <div class="img-container">
+        <div id="jImg"><img src="assets/default.png" class="j-img-default"></div>
+        <div id="pcImg"><img src="assets/default.png"></div>
+    </div>
+    <section class="info">
+        <div id="resultado" class="">Vamos a jugar!</div>
+    </section>
+
+    <section class="modal ">
+        <div class="modal__container">
+            <span id="modal-img"></span>
+            <h2 class="modal__title" id="modal-title">Ganaste 3 veces!</h2>
+            <p class="modal__paragraph" id="modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nobis nisi quibusdam doloremque expedita quae ipsam accusamus quisquam quas, culpa tempora. Veniam consectetur deleniti maxime.</p>
+            <a href="#" class="modal__close">Jugar de nuevo</a>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@100;400;900&display=swap');
+body {
+    color: aliceblue;
+    font-family: 'Saira', sans-serif;
+}
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5em;
+}
+
+.bg-image {
+    background-image: url('../assets/bg.jpg');
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    z-index: -999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: " ";
+}
+
+.img-container {
+    display: flex;
+    max-width: 564px;
+    margin: auto;
+}
+#jImg img, #pcImg img {
+    border: 6px rgba(255, 255, 255, 0.7) solid;
+    background-color: rgba(0, 0, 0, .35);
+    margin: 10px;
+    box-shadow: 8px 8px 0px 0px rgba(0,0,0,.3);
+    width: 250px;    
+}
+#jImg img {
+    transform: rotate(-5deg) scaleX(-1);
+}
+#pcImg img{
+    transform: rotate(5deg);
+
+}
+
+#jImg::after, #pcImg::after {
+    font-size: 1.5em;
+    font-weight: bolder;
+    background-color: aliceblue;
+    color: rgba(0,0,0,0.7);
+    z-index: 2;
+    text-align: center;
+    position: relative;
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+}
+#jImg::after {
+    content: "USUARIO";
+    transform: translateX(20px) translateY(-40px) rotate(-5deg);
+}
+#pcImg::after {
+    content: "SISTEMA";
+    transform: translateX(-15px) translateY(-40px) rotate(5deg);
+}
+
+.j-img-default {
+    transform: scaleX(1) rotate(-5deg) !important;
+    box-shadow: -8px 8px 0px 0px rgba(0,0,0,.3);
+}
+
+section.info {
+    max-width: 564px;
+    margin: 10px auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+#resultado, #marcador {
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, .05);
+    padding: 20px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+    border-radius: 7px;
+}
+#resultado {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.resultado-defeat {
+    background-color: #F26250 !important;
+}
+
+.resultado-win {
+    background-color: rgb(0, 131, 124) !important;
+}
+
+#marcador {
+    position: absolute;
+    display: inline-block;
+    top: 50px;
+    right: 10px;
+    width: 140px;
+}
+
+section.botones {
+    text-align: center;
+    height: 150px;
+}
+section.botones button {
+    background: none;
+    border: none;
+    margin: 0 5px;
+    transition: 0.25s;
+    cursor: pointer;
+
+}
+section.botones button:hover, section.botones button:focus {
+    transform: scale(1.3);
+}
+
+section.botones button img {
+    height: 120px;
+}
+
+/*css del modal*/
+
+.modal{
+    color: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    z-index: 3;
+    pointer-events: none;
+    transition: opacity .6s .9s;
+    --transform: translateY(-100vh);
+    --transition: transform .8s;
+}
+
+.modal--show{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+    --transform: translateY(0);
+    --transition: transform .8s .8s;
+}
+
+.modal__container{
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 3em 2.5em;
+    display: grid;
+    place-items: center;
+    grid-auto-columns: 100%;
+    transform: var(--transform);
+    transition:var(--transition);
+}
+
+.modal__title{
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.modal__paragraph{
+    margin-bottom: 10px;
+}
+
+.modal__img{
+    width: 90%;
+    max-width: 200px;
+}
+
+.modal__close{
+    text-decoration: none;
+    color: #fff;
+    background-color: darkslateblue;
+    padding: 1em 3em;
+    border: 1px solid ;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 300;
+    transition: background-color .3s;
+}

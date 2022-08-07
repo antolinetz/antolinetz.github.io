@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mokepon!!!</title>
+    
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section id="seleccionar-mascota">
+        <h1>MOKEPON!</h1>
+        <p><input type="radio" name="mode" id="oneByOne" checked><label for="oneByOne" class="game-mode">Combate</label><input type="radio" name="mode" id="sequence"><label for="sequence" class="game-mode">Secuencia</label></p>
+        <h2>Elige tu mascota:</h2>
+        <div class="tarjetas" id="contenedor-tarjetas">
+        </div>
+        <button id="m-jugador">Seleccionar</button>
+    </section>
+    <section id="seleccionar-ataque">
+        <h1>MOKEPON!</h1>
+        <h2>Elige tu ataque:</h2>
+        <div class="botones-ataque" id="contenedor-ataques">
+        </div>
+
+
+        <div id="mensajes">
+            <p id="resultado">Escoge tus ataques</p>
+            <section id="reiniciar">
+                <button>Reiniciar</button>
+            </section>
+        </div>
+        
+        <div class="ataques">
+            <div class="tarjeta-jugador">
+                <p id="vidas-jugador">0</p>
+                <p id="mascota-jugador">
+                </p>
+                <div id="ataque-jugador"></div>
+            </div>
+            <div class="tarjeta-enemigo">
+                <p id="vidas-enemigo">0</p>
+                <p id="mascota-enemigo"></p>
+                <div id="ataque-enemigo"></div>
+            </div>
+        </div>
+
+    </section>
+    <script src="js/script.js"></script>
+</body>
+</html>

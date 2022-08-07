@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:wght@300&display=swap');
+
+body {
+    color: aliceblue;
+    background-color: #293462;
+    font-family: 'Nunito', sans-serif;
+}
+#seleccionar-mascota {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 3em;
+    font-family: 'Luckiest Guy', cursive;
+    margin: 10px 0;
+    text-shadow: 2px 2px 0 #D61C4E, 2px -2px 0 #D61C4E, -2px 2px 0 #D61C4E, -2px -2px 0 #D61C4E, 2px 0px 0 #D61C4E, 0px 2px 0 #D61C4E, -2px 0px 0 #D61C4E, 0px -2px 0 #D61C4E, 2px 2px 2px rgba(206,89,55,0), 5px 5px 0px #fff80a;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.game-mode {
+    width: 120px;
+    padding: 10px 0;
+    text-align: center;
+    display: inline-block;
+    background-color:rgba(255, 255, 255, 0.02);
+}
+
+input[type=radio]:checked + label.game-mode {
+    background-color: rgba(0,0,0,.15);
+}
+
+label.game-mode:first-of-type {
+    border-radius: 10px 0 0 10px;
+}
+
+label.game-mode:last-of-type {
+    border-radius: 0 10px 10px 0;
+}
+
+
+
+.tarjetas, .botones-ataque {
+    display: flex;
+    gap: 10px;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+input[type=radio]:checked + label{
+    background-color: #D61C4E;
+}
+
+
+label.tarjeta-mokepon {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 180px;
+    height: 100px;
+    background-color: #1a213e;
+    border: 1px solid #FFF80A;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+button#m-jugador {
+    margin: 30px 0 0;
+    padding: 20px;
+    background: transparent;
+    border: 2px solid aliceblue;
+    color: aliceblue;
+    border-radius: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.3em;
+}
+
+label.tarjeta-mokepon img {
+    width: 80px;
+}
+
+#seleccionar-ataque {
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.btn-ataque {
+    background-color: #FEB139;
+    border-radius: 20px;
+    border: 1px solid aliceblue;
+    height: 50px;
+    width: 50px;
+    font-size: larger;
+    font-family: 'Nunito', sans-serif;
+}
+
+div#mensajes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 7px;
+    background-color: aliceblue;
+    color: #293462;
+}
+
+#reiniciar button {
+    color: #D61C4E;
+    border: none;
+    font-family: 'Nunito' sans-serif;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.ataques {
+    display: grid;
+    grid-template-columns: 165px 165px;
+    position: relative;
+}
+
+.ataques::before {
+    position: absolute;
+    content: 'VS';
+    margin-top: 40px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 0 #D61C4E, 2px -2px 0 #D61C4E, -2px 2px 0 #D61C4E, -2px -2px 0 #D61C4E, 2px 0px 0 #D61C4E, 0px 2px 0 #D61C4E, -2px 0px 0 #D61C4E, 0px -2px 0 #D61C4E, 2px 2px 2px rgba(206,89,55,0), 3px 3px 0px #fff80a;
+}
+
+.tarjeta-jugador, .tarjeta-enemigo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#vidas-jugador, #vidas-enemigo {
+    font-size: 3em;
+    font-family: 'Luckiest Guy', cursive;
+    margin: 10px 0 0;
+}
+
+#mascota-jugador, #mascota-enemigo {
+    font-weight: bolder;
+    margin: 0;
+    text-transform: capitalize;
+    width: 100%;
+}
+#mascota-enemigo {
+    text-align: right;
+}
+#mascota-jugador img, #mascota-enemigo img{
+    width: 60px;
+}
+.name-m-jugador, .name-m-enemigo {
+    position: relative;
+    top: -40px;
+    background-color: #FEB139;
+    color: #1a213e;
+    border-radius: 7px;
+    padding: 2px 7px;
+}
+.icon-m-jugador, .icon-m-enemigo {
+    position: relative;
+    top: -20px;
+}
+
+.icon-m-jugador::before, .icon-m-enemigo::before{
+    width: 50px;
+    height: 50px;
+    background-color: #D61C4E;
+    border: 1px solid #fff;
+    content: '';
+    display: inline-block;
+    position: absolute;
+    z-index: -1;
+    border-radius: 60px 50px 65px 80px;
+    transform: rotate(-72deg);
+}
+
+.icon-m-enemigo::before {
+    transform: rotate(72deg);
+}
+
+#ataque-jugador, #ataque-enemigo {
+    width: 100%;
+    text-align: center;
+}
+
+#ataque-jugador p, #ataque-enemigo p {
+    margin: 0;
+    padding: 7px;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+#ataque-jugador p:first-child {
+    border-radius: 10px 0 0;
+}
+#ataque-jugador p:last-child {
+    border-radius: 0 0 0 10px;
+}
+
+#ataque-enemigo p:first-child {
+    border-radius: 0 10px 0 0;
+}
+#ataque-enemigo p:last-child {
+    border-radius: 0 0 10px 0;
+}
+
+#ataque-jugador p:nth-child(odd), #ataque-enemigo p:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 405px) {
+    .tarjetas {
+        flex-direction: column;
+    }
+}

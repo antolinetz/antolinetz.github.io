@@ -17,6 +17,19 @@
         </div>
         <button id="m-jugador">Seleccionar</button>
     </section>
+    
+    <section id="ver-mapa">
+        <h1>MOKEPON!</h1>
+        <h3>Recorre el mapa con tu Mokepon</h3>
+        <canvas id="mapa"></canvas>
+        <div class="mov-buttons">
+            <button id="m-up" class="btn-arrow" onmouseup="stopMov()" ontouchend="stopMov()" onmousedown="movUp()" ontouchstart="movUp()">↑</button><br/>
+            <button id="m-left" class="btn-arrow" onmouseup="stopMov()" ontouchend="stopMov()" onmousedown="movLeft()" ontouchstart="movLeft()">←</button>
+            <button id="m-down" class="btn-arrow" onmouseup="stopMov()" ontouchend="stopMov()" onmousedown="movDown()" ontouchstart="movDown()">↓</button>
+            <button id="m-right" class="btn-arrow" onmouseup="stopMov()" ontouchend="stopMov()" onmousedown="movRight()" ontouchstart="movRight()">→</button>
+        </div>
+    </section>
+    
     <section id="seleccionar-ataque">
         <h1>MOKEPON!</h1>
         <h2>Elige tu ataque:</h2>
@@ -26,7 +39,7 @@
 
         <div id="mensajes">
             <p id="resultado">Escoge tus ataques</p>
-            <section id="reiniciar">
+            <section id="reiniciar" style="display:none">
                 <button>Reiniciar</button>
             </section>
         </div>
